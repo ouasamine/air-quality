@@ -1,16 +1,18 @@
-import { getCityCoord, getCityIndex } from "../api/apiCalls";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCitiesData } from '../redux/reducers';
 
 function Main() {
-  let lat = '';
-  let long = '';
-  getCityCoord('London').then((data) => {
-    lat = data[0].lat; 
-    long = data[0].lon;
-    getCityIndex(lat, long).then((data) => console.log(data.list[0].main));
-  });
+  const citiesData = useSelector((state) => state.citiesData);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getCitiesData());
+  }, []);
+  
   return (
     <div>
-      This is main
+      Main
+      {citiesData.map((citiyData) => citiyData.city)}
     </div>
   )
 }
