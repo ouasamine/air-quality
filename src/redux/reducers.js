@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getCityCoord, getCityIndex } from '../api/apiCalls';
+import { v4 as idGenerator } from 'uuid';
 
 const GET_DATA = "airquality/getindex";
 const getCitiesData = createAsyncThunk(
@@ -13,7 +14,7 @@ const getCitiesData = createAsyncThunk(
           const lat = cityCoord[0].lat; 
           const long = cityCoord[0].lon;
           const cityData = await getCityIndex(lat, long);
-          return { city, data: cityData.list[0] };
+          return { id: idGenerator() ,city, data: cityData.list[0] };
         })
       );
     });
