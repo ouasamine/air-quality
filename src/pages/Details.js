@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { CityDetail } from '../components/CityDetail';
+import { Link, useParams } from 'react-router-dom';
+import { SingleDetail } from '../components/SingleDetail';
 
 function Details() {
-  const citiesData = useSelector((state) => state.citiesData);
+  const storedCitiesData = useSelector((state) => state.citiesData);
   const { cityId } = useParams();
-  function getCityAirData(cityId) {
+  function getCityAirData(cityId, citiesData) {
     const cityObj = citiesData.filter((cityData) => cityData.id === cityId);
     const compsValues = Object.values(cityObj[0].data.components);
     const airComps = [
@@ -23,11 +23,18 @@ function Details() {
     }
     return airComps;
   }
-  const cityAirComps = getCityAirData(cityId);
+  const cityAirComps = getCityAirData(cityId, storedCitiesData);
   return (
     <div>
+      <div>
+        <Link to="/">Go back</Link>
+      </div>
       This is details
-      {cityAirComps.map((component) => <CityDetail key={component.name} name={component.name} value={component.value} />)}
+      {cityAirComps.map((component) => <SingleDetail
+        key={component.name}
+        name={component.name}
+        value={component.value}
+      />)}
     </div>
   )
 }

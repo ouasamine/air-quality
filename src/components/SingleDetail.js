@@ -1,4 +1,4 @@
-export function CityDetail(props) {
+export function SingleDetail(props) {
   const { name, value} = props;
   return (
     <div>
