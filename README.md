@@ -34,7 +34,7 @@
 
 ## Live Demo 
 
-- [Live Demo Link](https://ouasamine.github.io/new-app)
+- [Live Demo Link](https://ouasamine.github.io/air-quality/)
 
 
 ## Getting Started 
