@@ -1,9 +1,9 @@
 export function SingleDetail(props) {
   const { name, value} = props;
   return (
-    <div>
+    <div className="dts-single">
       <div dangerouslySetInnerHTML={{__html: name}} />
-      <div>
+      <div style={{fontWeight: "900", color: "#efefef"}}>
         {value}
       </div>
     </div>

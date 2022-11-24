@@ -23,18 +23,31 @@ function Details() {
     }
     return airComps;
   }
+
+  function getCityName(cityId, citiesData) {
+    const cityObj = citiesData.filter((cityData) => cityData.id === cityId);
+    const cityName = cityObj[0].city;
+    return cityName;
+  }
+
+  const cityName = getCityName(cityId, storedCitiesData);
   const cityAirComps = getCityAirData(cityId, storedCitiesData);
   return (
-    <div>
-      <div>
+    <div id="details">
+      <nav>
         <Link to="/">Go back</Link>
+      </nav>
+      <header>
+        <h1> Air components Concentrations In {cityName} </h1>
+      </header>
+      <div className="dts-header">Pollutants concentration in μg/m3</div>
+      <div className="dts-container">
+        {cityAirComps.map((component) => <SingleDetail
+          key={component.name}
+          name={component.name}
+          value={component.value}
+        />)}
       </div>
-      This is details
-      {cityAirComps.map((component) => <SingleDetail
-        key={component.name}
-        name={component.name}
-        value={component.value}
-      />)}
     </div>
   )
 }

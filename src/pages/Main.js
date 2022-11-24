@@ -12,17 +12,21 @@ function Main() {
   }, []);
   
   return (
-    <div>
-      {citiesData.map((cityData) => {
-       return (
-        <Link to={`details/${cityData.id}`} key={cityData.id}>
-          <CityPreview 
-            cityName={cityData.city}
-            cityAqi={cityData.data.main.aqi}
-          />
-        </Link>
-       );
-      })}
+    <div id="main">
+      <header>
+        <img src="./map-morocco.png" alt="Map Of Morocco" />
+        <h1>Air Quality In Some Moroccan Cities.</h1>
+      </header>
+      <div className="ctd-container">
+        {citiesData.map((cityData, index) => 
+          <Link to={`details/${cityData.id}`} key={cityData.id}>
+            <CityPreview 
+              cityName={cityData.city}
+              cityAqi={cityData.data.main.aqi}
+            />
+          </Link>
+        )}
+      </div>
     </div>
   )
 }

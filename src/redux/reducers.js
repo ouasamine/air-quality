@@ -24,7 +24,7 @@ const getCitiesData = createAsyncThunk(
 );
 
 const initialState = {
-  cities: ["Casablanca", "Rabat", "Oujda", "Tangier", "Temara"],
+  cities: ["Casablanca", "Rabat", "Oujda", "Tangier", "Temara","Asfi"],
   citiesData: [],
 };
 
