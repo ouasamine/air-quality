@@ -1,28 +1,29 @@
-export function CityPreview(props) {
+/* eslint-disable react/prop-types */
+export default function CityPreview(props) {
   const { cityName, cityAqi } = props;
   let status = null;
-  let style = {fontWeight: "800"};
+  let style = { fontWeight: '800' };
 
   switch (cityAqi) {
     case 1:
-      status = "Good";
-      style = {...style, color: "#0f0"};
+      status = 'Good';
+      style = { ...style, color: '#0f0' };
       break;
     case 2:
-      status = "Fair";
-      style = {...style, color: "#5affa5"};
+      status = 'Fair';
+      style = { ...style, color: '#5affa5' };
       break;
     case 3:
-      status = "Moderate";
-      style = {...style, color: "#ff0"};
+      status = 'Moderate';
+      style = { ...style, color: '#ff0' };
       break;
     case 4:
-      status = "Poor";
-      style = {...style, color: "#fa0"};
+      status = 'Poor';
+      style = { ...style, color: '#fa0' };
       break;
     case 5:
-      status = "Very Poor";
-      style = {...style, color: "#f00"};
+      status = 'Very Poor';
+      style = { ...style, color: '#f00' };
       break;
     default:
       status = null;
@@ -40,5 +41,5 @@ export function CityPreview(props) {
         <span style={style}>{cityAqi}</span>
       </div>
     </div>
-  )
+  );
 }
