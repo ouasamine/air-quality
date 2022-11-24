@@ -11,7 +11,12 @@ function Details() {
   return (
     <div id="details">
       <nav>
-        <Link to="/">Go back</Link>
+        <Link to="/">
+        <span className="material-symbols-outlined">
+          chevron_left
+        </span>
+        </Link>
+        <h2>{cityName}</h2>
       </nav>
       <header>
         <h1> Air components Concentrations In {cityName} </h1>

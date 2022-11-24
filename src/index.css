@@ -14,6 +14,14 @@ body {
   background-color: #4369b2;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+
 #main header {
   display: flex;
   padding: 20px;
@@ -52,6 +60,16 @@ body {
   background-color: #35548b;
 }
 
+#details nav {
+  display: flex;
+  padding: 5px;
+  background-color: #35548b;
+}
+
+#details nav h2 {
+  margin: auto auto;
+}
+
 #details h1 {
   padding: 25px;
   text-align: center;
@@ -61,9 +79,6 @@ body {
   padding: 2px 0;
   background-color: #35548b;
   text-align: center;
-}
-
-.dts-container {
 }
 
 .dts-single {
