@@ -46,7 +46,9 @@ body {
   background-color: #4369c2;
 }
 
-.ctd-container a:nth-child(odd) {
+.ctd-container a:nth-child(1),
+.ctd-container a:nth-child(4),
+.ctd-container a:nth-child(5) {
   background-color: #35548b;
 }
 
