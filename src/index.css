@@ -22,6 +22,23 @@ body {
   'opsz' 48
 }
 
+#main nav {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #35548b;
+}
+
+#main nav input {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #e0e0e0;
+  color: #000;
+}
+
 #main header {
   display: flex;
   padding: 20px;
@@ -66,8 +83,14 @@ body {
   background-color: #35548b;
 }
 
+#details nav a {
+  z-index: 1;
+}
+
 #details nav h2 {
-  margin: auto auto;
+  width: 100% ;
+  margin-left: -24px;
+  text-align: center;
 }
 
 #details h1 {

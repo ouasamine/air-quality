@@ -13,6 +13,9 @@ function Main() {
   
   return (
     <div id="main">
+      <nav>
+        <input type="text" placeholder="Search" />
+      </nav>
       <header>
         <img src="./map-morocco.png" alt="Map Of Morocco" />
         <h1>Air Quality In Some Moroccan Cities.</h1>
