@@ -1,13 +1,118 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #4369b2;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48;
+}
+
+#main nav {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #35548b;
+}
+
+#main nav input {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+#main header {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+#main h1 {
+  width: 50%;
+}
+
+#main img {
+  width: 50%;
+}
+
+.ctd-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ctd-container a {
+  width: 50%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background-color: #4369c2;
+}
+
+.ctd-container a:nth-child(1),
+.ctd-container a:nth-child(4),
+.ctd-container a:nth-child(5) {
+  background-color: #35548b;
+}
+
+#details nav {
+  display: flex;
+  padding: 5px;
+  background-color: #35548b;
+}
+
+#details nav a {
+  z-index: 1;
+}
+
+#details nav h2 {
+  width: 100%;
+  margin-left: -24px;
+  text-align: center;
+}
+
+#details h1 {
+  padding: 25px;
+  text-align: center;
+}
+
+.dts-header {
+  padding: 2px 0;
+  background-color: #35548b;
+  text-align: center;
+}
+
+.dts-single {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.dts-single:nth-child(even) {
+  background-color: #35548b;
 }
