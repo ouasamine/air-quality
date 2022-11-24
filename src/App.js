@@ -7,7 +7,7 @@ import Main from './pages/Main';
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/air-quality">
         <Routes>
           <Route path="/" element={<Main />} />
           <Route
