@@ -78,6 +78,7 @@ body {
 
 #details nav {
   display: flex;
+  align-items: center;
   padding: 5px;
   background-color: #35548b;
 }
@@ -90,6 +91,12 @@ body {
   width: 100%;
   margin-left: -24px;
   text-align: center;
+}
+
+#details nav h2 small {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: lighter;
 }
 
 #details h1 {

@@ -1,13 +1,14 @@
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import SingleDetail from '../components/SingleDetail';
-import { getCityAirData, getCityName } from '../func/helperFunctions';
+import { getCityAirData, getCityName, getDataTime } from '../func/helperFunctions';
 
 function Details() {
   const storedCitiesData = useSelector((state) => state.citiesData);
   const { cityId } = useParams();
   const cityName = getCityName(cityId, storedCitiesData);
   const cityAirComps = getCityAirData(cityId, storedCitiesData);
+  const dataTime = getDataTime(cityId, storedCitiesData);
   return (
     <div id="details">
       <nav>
@@ -16,7 +17,10 @@ function Details() {
             chevron_left
           </span>
         </Link>
-        <h2>{cityName}</h2>
+        <h2>
+          {cityName}
+          <small>{dataTime}</small>
+        </h2>
       </nav>
       <header>
         <h1>

@@ -22,3 +22,10 @@ export function getCityName(cityId, citiesData) {
   const cityName = cityObj[0].city;
   return cityName;
 }
+
+export function getDataTime(cityId, citiesData) {
+  const cityObj = citiesData.filter((cityData) => cityData.id === cityId);
+  const storedDataTime = new Date(parseInt(cityObj[0].data.dt, 10) * 1000);
+  const dataTime = `${storedDataTime.getDate()}-${storedDataTime.getMonth() + 1}-${storedDataTime.getFullYear()} ${storedDataTime.toLocaleTimeString()}`;
+  return dataTime;
+}
