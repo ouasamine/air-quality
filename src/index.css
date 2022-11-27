@@ -71,9 +71,8 @@ body {
   background-color: #4369c2;
 }
 
-.ctd-container a:nth-child(1),
-.ctd-container a:nth-child(4),
-.ctd-container a:nth-child(5) {
+.ctd-container a:nth-child(4n+1),
+.ctd-container a:nth-child(4n) {
   background-color: #35548b;
 }
 
@@ -108,9 +107,12 @@ body {
   height: 55px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   font-size: 1.5rem;
   text-align: center;
+}
+
+.dts-single div {
+  width: 50%;
 }
 
 .dts-single:nth-child(even) {

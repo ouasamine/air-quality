@@ -25,7 +25,22 @@ const getCitiesData = createAsyncThunk(
 );
 
 const initialState = {
-  cities: ['Casablanca', 'Rabat', 'Oujda', 'Tangier', 'Temara', 'Asfi'],
+  cities: [
+    'Casablanca',
+    'Rabat',
+    'Fes',
+    'Meknes',
+    'Marrakesh',
+    'Agadir',
+    'Oujda',
+    'Tangier',
+    'Temara',
+    'Salé',
+    'Asfi',
+    'Mohammedia',
+    'Khouribga',
+    'Safi',
+  ],
   citiesData: [],
 };
 
