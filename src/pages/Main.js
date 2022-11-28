@@ -17,7 +17,7 @@ function Main() {
         <input type="text" placeholder="Search" />
       </nav>
       <header>
-        <img src="./map-morocco.png" alt="Map Of Morocco" />
+        <div className="img-plh"><img src="./map-morocco.png" alt="Map Of Morocco" /></div>
         <h1>Air Quality In Some Moroccan Cities.</h1>
       </header>
       <div className="ctd-container">

@@ -24,8 +24,8 @@ function Details() {
       </nav>
       <header>
         <h1>
-          {' '}
           Air components Concentrations In
+          {' '}
           {cityName}
         </h1>
       </header>
