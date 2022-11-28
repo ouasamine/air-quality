@@ -171,6 +171,17 @@ body {
 
 }
 
+@media only screen and (min-width: 500px) {
+  #main header {
+    padding: 0 10%;
+    gap: 0px;
+  }
+
+  .img-plh img {
+    width: 70%;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   #main header {
     padding: 0 25%;
@@ -178,7 +189,7 @@ body {
   }
 
   .img-plh img {
-    width: 90%;
+    width: 70%;
   }
 
   #main header h1 {
